@@ -1,2 +1,28 @@
 ---
 # tasks file for erlang (CentOS specific)
+- name: Import Erlang Solutions repo key
+  become: yes
+  command: rpm --import http://packages.erlang-solutions.com/rpm/erlang_solutions.asc
+
+- name: Add Erlang Solutions repository
+  become: yes
+  template:
+    src: templates/erlang.repo.j2
+    dest: /etc/yum.repos.d/erlang.repo
+    owner: root
+    group: root
+    mode: 0644
+    force: yes
+  tags:
+    - erlang
+
+- name: Install Erlang Solutions packages
+  become: yes
+  yum:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - "{{ erlang_packages }}"
+  tags:
+    - erlang
