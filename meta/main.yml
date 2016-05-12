@@ -9,7 +9,7 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - trusty
-    - name: EL
+    - name: CentOS
       cersions:
         - 6
         - 7
