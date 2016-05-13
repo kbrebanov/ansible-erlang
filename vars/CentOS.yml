@@ -1,2 +1,5 @@
 ---
 # vars file for erlang (CentOS specific)
+
+erlang_packages:
+  - esl-erlang-{{ erlang_version }}

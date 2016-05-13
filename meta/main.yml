@@ -1,5 +1,5 @@
 galaxy_info:
-  author: Kevin Brebanov
+  author: Kevin Brebanov / Zsolt Kulcsar
   description: Installs Erlang
   company:
   license: BSD
@@ -9,6 +9,10 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - trusty
+    - name: CentOS
+      cersions:
+        - 6
+        - 7
   galaxy_tags:
     - development
 dependencies: []
