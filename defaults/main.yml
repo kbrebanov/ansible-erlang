@@ -1,4 +1,4 @@
 ---
 # defaults file for erlang
 
-erlang_version: 19.1.5
+erlang_version: 19.2
